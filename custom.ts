@@ -7,7 +7,7 @@ namespace hiragana_agent {
     //% blockId=hiragana_agent_8
     //% block="エージェントをじぶんのいちにもどす"
     export function teleportToPlayer(): void {
-        return agent.teleportToPlayer();
+        agent.teleportToPlayer();
     }
 
     //% blockId=hiragana_agent_7
@@ -27,18 +27,18 @@ namespace hiragana_agent {
     export function teleport(t_pos: Position): void {
         let agentTrune: CompassDirection
         let agentOrient = agent.getOrientation()
-        if (agentOrient == 0){
+        if (agentOrient == 0) {
             agentTrune = SOUTH
-        }else if (agentOrient == -180){
+        } else if (agentOrient == -180) {
             agentTrune = NORTH
-        }else if (agentOrient == -90){
+        } else if (agentOrient == -90) {
             agentTrune = EAST
-        }else if (agentOrient == 90){
+        } else if (agentOrient == 90) {
             agentTrune = WEST
         } else {
             agentTrune = SOUTH
         }
-        return agent.teleport(positions.add(agent.getPosition(),t_pos), agentTrune);
+        agent.teleport(positions.add(agent.getPosition(), t_pos), agentTrune);
     }
 
     //% blockId=hiragana_agent_4
@@ -50,19 +50,19 @@ namespace hiragana_agent {
     //% blockId=hiragana_agent_3
     //% block=" エージェントに $direction をはかいさせる"
     export function destroy(direction: SixDirection): void {
-        return agent.destroy(direction);
+        agent.destroy(direction);
     }
 
     //% blockId=hiragana_agent_2
     //% block="エージェントに $direction へおかせる"
     export function place(direction: SixDirection): void {
-        return agent.place(direction);
+        agent.place(direction);
     }
 
     //% blockId=hiragana_agent_1
     //% block="エージェントのむきを $direction にかえる"
     export function turn(direction: TurnDirection): void {
-        return agent.turn(direction);
+        agent.turn(direction);
     }
 
 
@@ -70,12 +70,12 @@ namespace hiragana_agent {
     //% block="エージェントを $direction に $blocks ブロックいどうさせる"
     //% blocks.defl=1
     export function move(direction: SixDirection, blocks: number): void {
-        return agent.move(direction, blocks);
+        agent.move(direction, blocks);
     }
 
     //% blockID=hiragana_agent_9
     //% block="エージェントにトロッコをおかせる"
     export function placeMineCart(): void {
-        return player.execute("execute @c ~~~ summon minecart");
+        player.execute("execute @c ~~~ summon minecart");
     }
 }
