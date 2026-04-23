@@ -30,7 +30,7 @@ namespace hiragana_agent {
     //% hoge.defl=true
     //% handlerStatement=true
     //% topblock=false
-    export function moshi(hoge: boolean, handler: () => void): void {
+    export function moshi(hoge: Bool, handler: () => void): void {
         if(hoge) handler();
     }    
 
