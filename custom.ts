@@ -22,8 +22,8 @@ namespace hiragana_agent {
     //% blockId=hiragana_boolean
     //% block="$bool"
     //% bool.defl=true
-    export function trueFalse(bool: Bool): boolean {
-        return !!bool;
+    export function trueFalse(bool: Bool): Bool {
+        return bool;
     }
 
     //% blockId=hiragana_agent_11
