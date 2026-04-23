@@ -20,9 +20,9 @@ namespace hiragana_agent {
 
     export enum Bool {
         //% block="しん"
-        a,
+        Shin = 1,
         //% block="ぎ"
-        b
+        Gi = 0
     }
 
     //% blockId=hiragana_agent_13
@@ -37,8 +37,8 @@ namespace hiragana_agent {
     //% blockId=hiragana_boolean
     //% block="$bool"
     //% bool.defl=true
-    export function trueFalse(bool: Bool): Bool {
-        return bool;
+    export function shingi(bool: Bool): boolean {
+        return bool === Bool.Shin;
     }
 
     //% blockId=hiragana_agent_11
