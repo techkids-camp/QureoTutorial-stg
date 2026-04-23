@@ -134,7 +134,7 @@ namespace hiragana_agent {
         agent.move(direction, blocks);
     }
 
-    //% blockID=hiragana_agent_9
+    //% blockID=hiragana_agent_999
     //% block="エージェントにトロッコをおかせる"
     export function placeMineCart(): void {
         player.execute("execute @c ~~~ summon minecart");
