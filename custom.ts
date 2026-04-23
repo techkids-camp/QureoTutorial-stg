@@ -4,10 +4,10 @@
 //% color=#D83B01 weight=400 icon="\uf1e6" block="エージェント"
 namespace hiragana_agent {
     export enum Bool {
-        //% block="真"
-        しん,
-        //% block="儀"
-        ぎ
+        //% block="しん"
+        a,
+        //% block="ぎ"
+        b
     }
 
     //% blockId=hiragana_agent_13
@@ -23,7 +23,7 @@ namespace hiragana_agent {
     //% block="$bool"
     //% bool.defl=true
     export function trueFalse(bool: Bool): boolean {
-        return bool === Bool.しん;
+        return bool === Bool.a;
     }
 
     //% blockId=hiragana_agent_11
