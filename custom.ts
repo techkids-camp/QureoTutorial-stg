@@ -3,11 +3,11 @@
  */
 //% color=#D83B01 weight=400 icon="\uf1e6" block="エージェント"
 namespace hiragana_agent {
-    export enum しんぎ {
+    export enum Bool {
         //% block="真"
-        しん,
-        //% block="偽"
-        ぎ
+        a,
+        //% block="儀"
+        b
     }
 
     //% blockId=hiragana_agent_13
@@ -20,9 +20,10 @@ namespace hiragana_agent {
     }    
 
     //% blockId=hiragana_boolean
-    //% block="$値"
-    export function _しんぎ(値: しんぎ): boolean {
-        return 値 === しんぎ.しん;
+    //% block="$bool"
+    //% bool.defl=true
+    export function trueFalse(bool: Bool): boolean {
+        return bool === Bool.a;
     }
 
     //% blockId=hiragana_agent_11
