@@ -13,6 +13,7 @@ namespace hiragana_agent {
     //% blockId=hiragana_agent_13
     //% block="もし $hoge なら"
     //% hoge.defl=true
+    //% handlerStatement=true
     //% topblock=false
     export function moshi(hoge: boolean, handler: () => void): void {
         if(hoge) handler();
