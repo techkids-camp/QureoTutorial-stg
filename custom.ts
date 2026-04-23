@@ -23,7 +23,7 @@ namespace hiragana_agent {
     //% block="$bool"
     //% bool.defl=true
     export function trueFalse(bool: Bool): boolean {
-        return bool === Bool.a;
+        return !!bool;
     }
 
     //% blockId=hiragana_agent_11
