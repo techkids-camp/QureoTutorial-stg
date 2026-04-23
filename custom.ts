@@ -3,10 +3,29 @@
  */
 //% color=#D83B01 weight=400 icon="\uf1e6" block="エージェント"
 namespace hiragana_agent {
+    export enum しんぎ {
+        //% block="真"
+        しん,
+        //% block="偽"
+        ぎ
+    }
+
+    //% blockId=hiragana_agent_10
+    //% block="くりかえし $times 回"
+    //% times.defl=4
+    //% handlerStatement=true
+    //% topblock=false
+    export function repeat(times: number, body: () => void): void {
+        for (let i = 0; i < times; i++) {
+            body();
+        }
+    }
+
     //% blockId=hiragana_agent_9
-    //% block="チャットコマンド $aa をにゅうりょくしたとき"
-    export function test(aa: string, handler: () => void): void {
-        teleportToPlayer.onChat(aa, handler);
+    //% block="チャットコマンド $コマンド をにゅうりょくしたとき"
+    //% コマンド.defl="hello"
+    export function _onChatCommand(コマンド: string, handler: () => void): void {
+        player.onChat(コマンド, handler);
     }
 
     //% blockId=hiragana_agent_8
