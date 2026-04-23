@@ -26,7 +26,7 @@ namespace hiragana_agent {
     }
 
 
-    //% blockId=hiragana_agent_14
+    //% blockId=hiragana_shingi
     //% block="$bool"
     //% bool.defl=true
     export function shingi(bool: Bool): boolean {
