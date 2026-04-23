@@ -35,7 +35,6 @@ namespace hiragana_agent {
 
     //% blockId=hiragana_agent_13
     //% block="もし $hoge なら"
-    //% hoge.shadow=hiragana_shingi
     //% topblock=false
     export function moshi(hoge: boolean, handler: () => void): void {
         if (hoge) handler();
