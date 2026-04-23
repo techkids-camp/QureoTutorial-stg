@@ -25,14 +25,6 @@ namespace hiragana_agent {
         Gi = 0
     }
 
-    //% blockId=hiragana_agent_13
-    //% block="もし $hoge なら"
-    //% hoge.defl=true
-    //% handlerStatement=true
-    //% topblock=false
-    export function moshi(hoge: Bool, handler: () => void): void {
-        if(hoge) handler();
-    }    
 
     //% blockId=hiragana_boolean
     //% block="$bool"
@@ -40,6 +32,15 @@ namespace hiragana_agent {
     export function shingi(bool: Bool): boolean {
         return bool === Bool.Shin;
     }
+
+    //% blockId=hiragana_agent_13
+    //% block="もし $hoge なら"
+    //% handlerStatement=true
+    //% hoge.shadow=hiragana_shingi
+    //% topblock=false
+    export function moshi(hoge: boolean, handler: () => void): void {
+        if(hoge) handler();
+    }    
 
     //% blockId=hiragana_agent_11
     //% block="はじめに"
