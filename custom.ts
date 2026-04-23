@@ -13,6 +13,7 @@ namespace hiragana_agent {
     //% blockId=hiragana_agent_13
     //% block="もし $hoge なら"
     //% hoge.defl=true
+    //% topblock=false
     export function moshi(hoge: boolean, handler: () => void): void {
         if(hoge) handler();
     }    
@@ -42,7 +43,6 @@ namespace hiragana_agent {
 
     //% blockId=hiragana_agent_9
     //% block="チャットコマンド $aaa をにゅうりょくしたとき"
-    //% aaa.defl="hello"
     export function chatCommand(aaa: string, handler: () => void): void {
         player.onChat(aaa, handler);
     }
