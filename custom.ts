@@ -5,9 +5,9 @@
 namespace hiragana_agent {
     export enum Bool {
         //% block="真"
-        a,
+        しん,
         //% block="儀"
-        b
+        ぎ
     }
 
     //% blockId=hiragana_agent_13
@@ -23,7 +23,7 @@ namespace hiragana_agent {
     //% block="$bool"
     //% bool.defl=true
     export function trueFalse(bool: Bool): boolean {
-        return bool === Bool.a;
+        return bool === Bool.しん;
     }
 
     //% blockId=hiragana_agent_11
