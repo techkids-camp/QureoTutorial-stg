@@ -14,7 +14,7 @@ namespace hiragana_agent {
     //% blockId=hiragana_agent_14
     //% block="$direction"
     //% direction.defl=2
-    export function turnDirection(direction: HiraganaTurnDirection): HiraganaTurnDirection {
+    export function turnDirection(direction: HiraganaTurnDirection): number {
         return direction;
     }
 
