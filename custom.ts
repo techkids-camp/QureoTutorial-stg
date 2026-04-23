@@ -1,23 +1,20 @@
-//% emitAsConstant
-enum HiraganaTurnDirection {
-    //% block="ひだり"
-    //% blockIdentity="hiraganaConst.turnDirection"
-    Left = 0,
-    //% block="みぎ"
-    //% blockIdentity="hiraganaConst.turnDirection"
-    Right = 1
-}
-
 /**
  * Custom blocks
  */
 //% color=#D83B01 weight=400 icon="\uf1e6" block="エージェント"
 namespace hiragana_agent {
+    export enum HiraganaTurnDirection {
+        //% block="ひだり"
+        Left = 2,
+        //% block="みぎ"
+        Right = 3
+    }
+    
     //% shim=TD_ID
     //% blockId=hiragana_turn_direction
     //% block="$direction"
     //% blockHidden=true
-    export function turnDirection(direction: HiraganaTurnDirection): number {
+    export function turnDirection(direction: HiraganaTurnDirection): HiraganaTurnDirection {
         return direction;
     }
 
