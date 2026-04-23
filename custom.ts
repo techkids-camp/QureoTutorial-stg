@@ -10,9 +10,10 @@ namespace hiragana_agent {
         Right = 3
     }
 
-    //% blockId=hiragana_agent_turn_direction
+    
+    //% blockId=hiragana_agent_15
     //% block="$direction"
-    //% direction.defl=HiraganaTurnDirection.Left
+    //% direction.defl=2
     export function turnDirection(direction: HiraganaTurnDirection): number {
         return direction;
     }
@@ -24,29 +25,30 @@ namespace hiragana_agent {
         Gi = 0
     }
 
-    //% blockId=hiragana_boolean
+
+    //% blockId=hiragana_agent_14
     //% block="$bool"
-    //% bool.defl=Bool.Shin
+    //% bool.defl=true
     export function shingi(bool: Bool): boolean {
         return bool === Bool.Shin;
     }
 
-    //% blockId=hiragana_agent_moshi
+    //% blockId=hiragana_agent_13
     //% block="もし $hoge なら"
     //% handlerStatement=true
-    //% hoge.defl=Bool.Shin
+    //% hoge.defl=true
     //% topblock=false
     export function moshi(hoge: Bool, handler: () => void): void {
-        if (hoge === Bool.Shin) handler();
-    }
+        if(hoge === Bool.Shin) handler();
+    }    
 
-    //% blockId=hiragana_agent_initial
+    //% blockId=hiragana_agent_11
     //% block="はじめに"
     export function initial(handler: () => void): void {
         handler();
     }
 
-    //% blockId=hiragana_agent_repeat
+    //% blockId=hiragana_agent_10
     //% block="くりかえし $times 回"
     //% times.defl=4
     //% handlerStatement=true
@@ -57,31 +59,31 @@ namespace hiragana_agent {
         }
     }
 
-    //% blockId=hiragana_agent_chat
+    //% blockId=hiragana_agent_9
     //% block="チャットコマンド $aaa をにゅうりょくしたとき"
     export function chatCommand(aaa: string, handler: () => void): void {
         player.onChat(aaa, handler);
     }
 
-    //% blockId=hiragana_agent_teleport_to_player
+    //% blockId=hiragana_agent_8
     //% block="エージェントをじぶんのいちにもどす"
     export function teleportToPlayer(): void {
         agent.teleportToPlayer();
     }
 
-    //% blockId=hiragana_agent_inspect
+    //% blockId=hiragana_agent_7
     //% block="エージェントの $direction の　$kind  "
     export function inspect(kind: AgentInspection, direction: SixDirection): number {
         return agent.inspect(kind, direction);
     }
 
-    //% blockId=hiragana_agent_detect
+    //% blockId=hiragana_agent_6
     //% block="エージェントの  $direction　に　$kind  がある"
     export function detect(kind: AgentDetection, direction: SixDirection): boolean {
         return agent.detect(kind, direction);
     }
 
-    //% blockId=hiragana_agent_teleport
+    //% blockId=hiragana_agent_5
     //% block="エージェントをいまのいちから %t_pos=minecraftCreatePosition にテレポートさせる"
     export function teleport(t_pos: Position): void {
         let agentTrune: CompassDirection
@@ -100,38 +102,39 @@ namespace hiragana_agent {
         agent.teleport(positions.add(agent.getPosition(), t_pos), agentTrune);
     }
 
-    //% blockId=hiragana_agent_set_slot
+    //% blockId=hiragana_agent_4
     //% block="スロットばんごう $slot をセットする"
     export function setSlot(slot: number): void {
         return agent.setSlot(slot);
     }
 
-    //% blockId=hiragana_agent_destroy
+    //% blockId=hiragana_agent_3
     //% block=" エージェントに $direction をはかいさせる"
     export function destroy(direction: SixDirection): void {
         agent.destroy(direction);
     }
 
-    //% blockId=hiragana_agent_place
+    //% blockId=hiragana_agent_2
     //% block="エージェントに $direction へおかせる"
     export function place(direction: SixDirection): void {
         agent.place(direction);
     }
 
-    //% blockId=hiragana_agent_turn
+    //% blockId=hiragana_agent_1
     //% block="エージェントのむきを $direction にかえる"
     export function turn(direction: TurnDirection): void {
         agent.turn(direction);
     }
 
-    //% blockId=hiragana_agent_move
+
+    //% blockID=hiragana_agent_0
     //% block="エージェントを $direction に $blocks ブロックいどうさせる"
     //% blocks.defl=1
     export function move(direction: SixDirection, blocks: number): void {
         agent.move(direction, blocks);
     }
 
-    //% blockId=hiragana_agent_place_minecart
+    //% blockID=hiragana_agent_999
     //% block="エージェントにトロッコをおかせる"
     export function placeMineCart(): void {
         player.execute("execute @c ~~~ summon minecart");
