@@ -10,6 +10,25 @@ namespace hiragana_agent {
         ぎ
     }
 
+    //% blockId=hiragana_agent_13
+    //% block="もし $hoge なら"
+    //% hoge.defl=true
+    export function moshi(hoge: boolean, handler: () => void): void {
+        if(hoge) handler();
+    }    
+
+    //% blockId=hiragana_boolean
+    //% block="$値"
+    export function _しんぎ(値: しんぎ): boolean {
+        return 値 === しんぎ.しん;
+    }
+
+    //% blockId=hiragana_agent_11
+    //% block="はじめに"
+    export function initial(handler: () => void): void {
+        handler();
+    }
+
     //% blockId=hiragana_agent_10
     //% block="くりかえし $times 回"
     //% times.defl=4
@@ -22,10 +41,10 @@ namespace hiragana_agent {
     }
 
     //% blockId=hiragana_agent_9
-    //% block="チャットコマンド $コマンド をにゅうりょくしたとき"
-    //% コマンド.defl="hello"
-    export function _onChatCommand(コマンド: string, handler: () => void): void {
-        player.onChat(コマンド, handler);
+    //% block="チャットコマンド $aaa をにゅうりょくしたとき"
+    //% aaa.defl="hello"
+    export function chatCommand(aaa: string, handler: () => void): void {
+        player.onChat(aaa, handler);
     }
 
     //% blockId=hiragana_agent_8
