@@ -3,6 +3,11 @@
  */
 //% color=#D83B01 weight=400 icon="\uf1e6" block="エージェント"
 namespace hiragana_agent {
+    //% blockId=hiragana_agent_9
+    //% block="チャットコマンド $aa をにゅうりょくしたとき"
+    export function test(aa: string, handler: () => void): void {
+        teleportToPlayer.onChat(aa, handler);
+    }
 
     //% blockId=hiragana_agent_8
     //% block="エージェントをじぶんのいちにもどす"
