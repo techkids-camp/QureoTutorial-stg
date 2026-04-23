@@ -35,10 +35,12 @@ namespace hiragana_agent {
 
     //% blockId=hiragana_agent_13
     //% block="もし $hoge なら"
+    //% handlerStatement=true
+    //% hoge.defl=true
     //% topblock=false
-    export function moshi(hoge: boolean, handler: () => void): void {
-        if (hoge) handler();
-    } 
+    export function moshi(hoge: Bool, handler: () => void): void {
+        if(hoge === Bool.Shin) handler();
+    }    
 
     //% blockId=hiragana_agent_11
     //% block="はじめに"
