@@ -9,11 +9,11 @@ namespace hiragana_agent {
         //% block="みぎ"
         Right = 3
     }
+
     
-    //% shim=TD_ID
-    //% blockId=hiragana_turn_direction
+    //% blockId=hiragana_agent_14
     //% block="$direction"
-    //% blockHidden=true
+    //% direction.defl=2
     export function turnDirection(direction: HiraganaTurnDirection): HiraganaTurnDirection {
         return direction;
     }
