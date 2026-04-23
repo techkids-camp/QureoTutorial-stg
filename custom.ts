@@ -29,6 +29,7 @@ namespace hiragana_agent {
     //% blockId=hiragana_shingi
     //% block="$bool"
     //% bool.defl=true
+    //% shim=TD_ID
     export function shingi(bool: Bool): boolean {
         return bool === Bool.Shin;
     }
