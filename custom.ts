@@ -36,7 +36,7 @@ namespace hiragana_agent {
     //% blockId=hiragana_agent_13
     //% block="もし $hoge なら"
     //% handlerStatement=true
-    //% bool.defl=true
+    //% hoge.defl=true
     //% topblock=false
     export function moshi(hoge: Bool, handler: () => void): void {
         if(hoge === Bool.Shin) handler();
